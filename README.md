@@ -52,8 +52,8 @@ Because ProMark.io is compiled fully inside client browser processes without ser
 
 1. **Clone the Version Target Repository:**
    ```bash
-   git clone https://github.com
-   cd promark-io
+   git clone https://github.com/ShreyasNanda/ProMark.io
+   cd ProMark.io
    ```
 
 2. **Establish Environment Workspace Integrity:**
