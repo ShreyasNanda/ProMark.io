@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Markdown Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        
+        <!-- Top Navigation and Tool Actions -->
+        <header class="app-header">
+            <div class="brand">
+                <span class="icon">📝</span>
+                <h2>ProMark<strong>.io</strong></h2>
+            </div>
+            <div class="toolbar">
+                <button id="btn-focus" class="action-btn btn-secondary">👁️ Zen Mode</button>
+                <button id="btn-theme" class="action-btn btn-secondary">🌓 Mode</button>
+                <button id="btn-clear" class="action-btn btn-secondary">Clear Canvas</button>
+                <button id="btn-download" class="action-btn btn-primary">Export HTML</button>
+            </div>
+        </header>
+
+        <!-- Split-Screen Core Workspace -->
+        <main class="workspace-container" id="workspace">
+            <!-- Left Side: Source Input Panel -->
+            <section class="workspace-panel">
+                <div class="panel-bar">
+                    <span class="tab-indicator">source_document.md</span>
+                    <div class="format-helpers">
+                        <button id="btn-bold" class="format-btn" title="Bold">B</button>
+                        <button id="btn-italic" class="format-btn" title="Italic">I</button>
+                        <button id="btn-code" class="format-btn" title="Inline Code">&lt;/&gt;</button>
+                    </div>
+                </div>
+                <textarea id="markdown-input" spellcheck="false" placeholder="Begin typing standard markdown components here..."></textarea>
+            </section>
+
+            <!-- Right Side: Live HTML Render Preview Panel -->
+            <section class="workspace-panel" id="preview-panel">
+                <div class="panel-bar">
+                    <span class="tab-indicator">compiled_view.html</span>
+                    <button id="btn-copy" class="copy-action-btn" title="Copy Compiled HTML">Copy HTML</button>
+                </div>
+                <div id="preview-output" class="markdown-body"></div>
+            </section>
+        </main>
+
+        <!-- Bottom Informational Status Bar -->
+        <footer class="status-bar">
+            <div class="status-left">
+                <span class="status-mode">READY</span>
+            </div>
+            <div class="status-right">
+                <span id="counter-words">0 words</span>
+                <span class="divider">|</span>
+                <span id="counter-chars">0 characters</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
